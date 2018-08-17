@@ -18,8 +18,8 @@ paths:
     get:
       tags:
       - Device
-      summary: Get all device
-      description: Return all devices
+      summary: Get all device from repository
+      description: Return all devices details
       operationId: getDevices
       produces:
       - application/json
@@ -45,7 +45,7 @@ paths:
     get:
       tags:
       - Device
-      summary: Get device details by sku
+      summary: Get device details by sku provided
       description: Return a single device
       operationId: getDeviceBySKU
       produces:
