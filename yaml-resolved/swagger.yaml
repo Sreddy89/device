@@ -82,7 +82,7 @@ definitions:
       Price:
         type: number
         format: float
-    description: Model contains device SKU and Price
+    description: Model defination contains device SKU and Price
     example:
       Price: 0.8008282
       SKU: SKU
