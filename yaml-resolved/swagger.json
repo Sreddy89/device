@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  description: Genearte swagger to create artifacts for Device API
+  description: Create model in swagger to generate artifacts for Device API
   version: 1.0.0
   title: Device API
 host: virtserver.swaggerhub.com
