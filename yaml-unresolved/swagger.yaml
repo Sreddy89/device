@@ -92,6 +92,6 @@ definitions:
         type: "string"
 # Added by API Auto Mocking Plugin
 host: virtserver.swaggerhub.com
-basePath: /Sreddy89/device/1.0.0
+basePath: /reddy78/device/1.0.0
 schemes:
  - https
