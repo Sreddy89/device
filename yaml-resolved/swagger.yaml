@@ -3,7 +3,7 @@ swagger: "2.0"
 info:
   description: Create a device model using swagger to generate artifacts for Device API
   version: 1.0.0
-  title: Device
+  title: Device API
 host: virtserver.swaggerhub.com
 basePath: /reddy78/device/1.0.0
 tags:
@@ -19,7 +19,7 @@ paths:
       tags:
       - Device
       summary: Get all device from repository
-      description: Return all devices details
+      description: Return all devices
       operationId: getDevices
       produces:
       - application/json
