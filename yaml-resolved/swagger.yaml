@@ -1,26 +1,26 @@
 ---
 swagger: "2.0"
 info:
-  description: Create a device model using swagger to generate artifacts for Device API
+  description: Genearte swagger to create artifacts for Services API
   version: 1.0.0
-  title: Device API
+  title: Services API
 host: virtserver.swaggerhub.com
-basePath: /reddy78/device/1.0.0
+basePath: /reddy78/services/1.0.0
 tags:
-- name: Device
-  description: Detail device Info.
+- name: Service
+  description: Detail service Info.
 schemes:
 - https
 produces:
 - application/json
 paths:
-  /device:
+  /service:
     get:
       tags:
-      - Device
-      summary: Get all device from repository
-      description: Return all devices
-      operationId: getDevices
+      - Service
+      summary: Get all services
+      description: Return all services
+      operationId: getServices
       produces:
       - application/json
       parameters: []
@@ -28,45 +28,45 @@ paths:
         200:
           description: successful operation
           schema:
-            $ref: '#/definitions/Device'
+            $ref: '#/definitions/Service'
         400:
           description: Invalid request
           schema:
             $ref: '#/definitions/ApiResponse'
         404:
-          description: Device not found
+          description: Service not found
           schema:
             $ref: '#/definitions/ApiResponse'
         500:
           description: Service unaviable
           schema:
             $ref: '#/definitions/ApiResponse'
-  /device/{sku}:
+  /service/{plan}:
     get:
       tags:
-      - Device
-      summary: Get device details by sku provided
-      description: Return a single device
-      operationId: getDeviceBySKU
+      - Service
+      summary: Get service details by plan
+      description: Return a single service
+      operationId: getServiceByPlan
       produces:
       - application/json
       parameters:
-      - name: sku
+      - name: plan
         in: path
-        description: ID of Device to return
+        description: ID of Service  to return
         required: true
         type: string
       responses:
         200:
           description: successful operation
           schema:
-            $ref: '#/definitions/Device'
+            $ref: '#/definitions/Service'
         400:
           description: Invalid request
           schema:
             $ref: '#/definitions/ApiResponse'
         404:
-          description: Device not found
+          description: Service not found
           schema:
             $ref: '#/definitions/ApiResponse'
         500:
@@ -74,18 +74,30 @@ paths:
           schema:
             $ref: '#/definitions/ApiResponse'
 definitions:
-  Device:
+  Service:
     type: object
     properties:
-      SKU:
+      Plan:
         type: string
       Price:
         type: number
         format: float
-    description: Model defination contains device SKU and Price
+      Text:
+        type: string
+      Voice:
+        type: string
+      Data:
+        type: string
+      AddOn:
+        type: string
+    description: Model contains service Plan, Price,Text,Voice,Data and AddOns
     example:
       Price: 0.8008282
-      SKU: SKU
+      Plan: Basic
+      Text: Unlimited
+      Voice: Unlimited
+      Data: 5GB
+      AddOn: Hulu
   ApiResponse:
     type: object
     properties:
